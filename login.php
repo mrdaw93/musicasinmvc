@@ -10,7 +10,7 @@
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT customerid FROM customer WHERE email = '$myusername' and lastname = '$mypassword'";
+      $sql = "SELECT customerid FROM Customer WHERE email = '$myusername' and lastname = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
